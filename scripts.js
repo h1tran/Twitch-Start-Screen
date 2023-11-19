@@ -70,8 +70,4 @@ window.onload = async () => {
             setImage(false);
         }
     });
-
-    setTimeout(() => {
-        location.reload();
-    }, 60000);
 }
