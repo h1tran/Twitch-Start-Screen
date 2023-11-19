@@ -58,12 +58,16 @@ window.onload = async () => {
         if (e.animationName == "slideIn") {
             firstImage.style.animation = `${cycleTime}ms ease-in-out forwards slideOut`;
             secondImage.style.animation = `${cycleTime}ms ease-in-out forwards slideIn`;
+        } else {
+            setImage(true);
         }
     });
     secondImage.addEventListener("animationend", (e) => {
         if (e.animationName == "slideIn") {
             secondImage.style.animation = `${cycleTime}ms ease-in-out forwards slideOut`;
             firstImage.style.animation = `${cycleTime}ms ease-in-out forwards slideIn`
+        } else {
+            setImage(false);
         }
     });
 }
